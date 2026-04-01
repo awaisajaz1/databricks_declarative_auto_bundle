@@ -25,6 +25,11 @@ resources:
         - task_key: notebook_task
           notebook_task:
             notebook_path: ../src/test_notebook.ipynb
+        - task_key: paid_orders
+          depends_on:
+            - task_key: notebook_task
+          notebook_task:
+            notebook_path: ../src/paid_orders_notebook.ipynb
 
       environments:
         - environment_key: default
